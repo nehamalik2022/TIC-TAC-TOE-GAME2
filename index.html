@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+
+<h1 class="heading" id="head">Tic tac toe</h1>
+<span class="button reset-btn" onclick="reset()">
+    <i class="fa fa-undo icon"></i>
+    </span>
+<span class="button music-btn" onclick="toggleMusic()">
+    <span class="toggle-bar"></span>
+    <i class="fa fa-music icon"></i>
+    </span>
+<div class="blocks-container">
+<div class="block" id="block_00" onclick="initiateTurn(0, 0)">
+    <span class="x-mark">X</span>
+    <span class="o-mark">O</span>
+</div>
+<div class="block" id="block_01" onclick="initiateTurn(0, 1)">
+    <span class="x-mark">X</span>
+    <span class="o-mark">O</span>
+</div>
+<div class="block" id="block_02" onclick="initiateTurn(0, 2)">
+    <span class="x-mark">X</span>
+    <span class="o-mark">O</span>
+</div>
+<div class="block" id="block_10" onclick="initiateTurn(1, 0)">
+    <span class="x-mark">X</span>
+    <span class="o-mark">O</span>
+</div>
+<div class="block" id="block_11" onclick="initiateTurn(1, 1)">
+    <span class="x-mark">X</span>
+    <span class="o-mark">O</span>
+</div>
+<div class="block" id="block_12" onclick="initiateTurn(1, 2)">
+    <span class="x-mark">X</span>
+    <span class="o-mark">O</span>
+</div>
+<div class="block" id="block_20" onclick="initiateTurn(2, 0)">
+    <span class="x-mark">X</span>
+    <span class="o-mark">O</span>
+</div>
+<div class="block" id="block_21" onclick="initiateTurn(2, 1)">
+    <span class="x-mark">X</span>
+    <span class="o-mark">O</span>
+</div>
+<div class="block" id="block_22" onclick="initiateTurn(2, 2)">
+    <span class="x-mark">X</span>
+    <span class="o-mark">O</span>
+</div>
+</div>
+<div id="player-container">
+<span class="players player1">
+    Player 1 (<b>X</b>)
+    <br>
+    <span id="player1-score">0</span>
+</span>
+<span class="players player2">
+    Player 2 (<b>O</b>)
+    <br>
+    <span id="player2-score">0</span>
+</span>
+</div>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+        <h2>Click the play button to enable the music</h2>
+      </div>
+      <div class="modal-body">
+        <button class="modal-play-button" onclick="playMusic()">Enable Audio</button>
+      </div>
+  </div>
+
+</div>
+
+<script src="code.js"></script>
+</body>
+</html>
